@@ -30,11 +30,15 @@ group :development do
 end
 
 group :test do
-  # gem 'database_cleaner'
-  # gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   # gem 'timecop'
   # gem 'webmock'
+
+  # acceptance
+  # gem 'capybara'
 end
 
 group :development, :test do
