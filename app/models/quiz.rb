@@ -1,6 +1,7 @@
 class Quiz < ActiveRecord::Base
   # rails 4, must get rid of attr_accessible
   attr_accessible :body, :user_id, :description, :topic_id, :slug, :page_title
+
   has_many :questions, :dependent => :destroy
   has_many :comments, :dependent => :destroy
   has_many :exams

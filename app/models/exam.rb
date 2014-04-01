@@ -1,6 +1,7 @@
 class Exam < ActiveRecord::Base
   # rails 4, must get rid of attr_accessible
   attr_accessible :quiz_id, :status, :user_id, :correct_answers, :incorrect_answers, :unanswered_questions
+
   has_many :answers, :dependent => :destroy
   belongs_to :quiz
   belongs_to :user
