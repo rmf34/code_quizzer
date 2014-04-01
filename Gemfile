@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.1'
+
 gem 'bootstrap-sass'
 gem 'cancan'
 gem 'devise'
@@ -15,6 +16,8 @@ gem 'simple_form'
 gem 'unicorn', :require => false
 # gem 'unicorn-worker-killer', :require => false
 
+# will need to move out when upgraded to rails 4 as asset group
+# has been deprecated
 group :assets do
   gem 'coffee-rails'
   gem 'sass-rails'
