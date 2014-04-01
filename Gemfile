@@ -12,7 +12,8 @@ gem 'masonry-rails'
 gem 'pg'
 gem 'rails', '3.2.17' # need to stay here until ready for rails 4 upgrade
 gem 'simple_form'
-gem 'thin'
+gem 'unicorn', :require => false
+# gem 'unicorn-worker-killer', :require => false
 
 group :assets do
   gem 'coffee-rails'
@@ -25,6 +26,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'thin'
 end
 
 group :test do

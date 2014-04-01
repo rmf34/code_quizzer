@@ -178,6 +178,10 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicorn (4.8.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -206,3 +210,4 @@ DEPENDENCIES
   simple_form
   thin
   uglifier
+  unicorn
