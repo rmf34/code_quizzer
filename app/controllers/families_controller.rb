@@ -15,17 +15,17 @@ class FamiliesController < ApplicationController
 
   def topic_order
     [
-      "Learn Ruby",
-      "Intermediate Ruby",
-      "Learn JavaScript",
-      "Learn Rails",
-      "Advanced Ruby",
-      "Ruby",
-      "Core CS",
-      "CSS",
-      "jQuery",
-      "Git/Github",
-      "Unix / Bash"
+      'Learn Ruby',
+      'Intermediate Ruby',
+      'Learn JavaScript',
+      'Learn Rails',
+      'Advanced Ruby',
+      'Ruby',
+      'Core CS',
+      'CSS',
+      'jQuery',
+      'Git/Github',
+      'Unix / Bash'
     ]
   end
 end

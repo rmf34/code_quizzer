@@ -11,14 +11,14 @@ class Exam < ActiveRecord::Base
       answer = Answer.where(:exam_id => self.id, :question_id => question.id).first
       if answer.blank?
         memo[:unanswered_questions] += 1
-      elsif answer.status == "correct"
+      elsif answer.status == 'correct'
         memo[:correct_answers] += 1
-      elsif answer.status == "incorrect"
+      elsif answer.status == 'incorrect'
         memo[:incorrect_answers] += 1
       end
       memo
     end
-    self.update_attributes(attributes.merge({:status => "graded"}))
+    self.update_attributes(attributes.merge({:status => 'graded'}))
   end
 
   def total_questions
