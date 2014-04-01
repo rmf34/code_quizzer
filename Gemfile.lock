@@ -188,7 +188,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 3.1.1)
+  bootstrap-sass
   byebug
   cancan
   coffee-rails
