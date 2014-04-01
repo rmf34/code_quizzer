@@ -1,5 +1,5 @@
 Compoundblingapplication::Application.routes.draw do
-  root :to => 'families#show', :id => 1
+  devise_for :users
 
   get 'stats' => 'user_statistics#index'
   get 'static_pages/about'
@@ -23,9 +23,9 @@ Compoundblingapplication::Application.routes.draw do
     resources :comments, :only => [:create]
   end
 
-  devise_for :users
-
   resources :topics, :path => '', :only => [] do
     resources :quizzes, :path => '', :only => [:show]
   end
+
+  root :to => 'families#show', :id => 1
 end
