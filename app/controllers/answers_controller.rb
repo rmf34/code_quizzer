@@ -1,4 +1,5 @@
 class AnswersController < ApplicationController
+
   def set_answer_status
     authorize! :create, Answer
     @answer = Answer.where(:exam_id => params[:answer][:exam_id], :question_id => params[:answer][:question_id]).first_or_initialize
@@ -20,4 +21,5 @@ class AnswersController < ApplicationController
       format.json { render :json => @answer }
     end
   end
+
 end

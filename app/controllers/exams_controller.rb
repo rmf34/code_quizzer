@@ -1,4 +1,5 @@
 class ExamsController < ApplicationController
+
   def grade_exam
     @exam = Exam.find(params[:id])
     authorize! :update, @exam
@@ -48,4 +49,5 @@ class ExamsController < ApplicationController
       end
     end
   end
+
 end

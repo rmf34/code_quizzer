@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+
   before_filter :find_question, :except => [:create]
 
   def create
@@ -31,9 +32,11 @@ class QuestionsController < ApplicationController
     redirect_to topic_quiz_path(topic_id: @quiz.topic.slug, id: @quiz)
   end
 
+
   private
 
-  def find_question
-    @question = Question.find(params[:id])
-  end
+    def find_question
+      @question = Question.find(params[:id])
+    end
+
 end

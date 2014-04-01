@@ -1,4 +1,5 @@
 class QuizzesController < ApplicationController
+
   def show
     @topic = Topic.where(slug: params[:topic_id]).first
     authorize! :show, @topic
@@ -10,4 +11,5 @@ class QuizzesController < ApplicationController
       authorize! :update, @exam
     end
   end
+
 end
