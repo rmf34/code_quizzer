@@ -11,6 +11,11 @@ end
 
 module Compoundblingapplication
   class Application < Rails::Application
+    # http://stackoverflow.com/questions/20361428/rails-i18n-validation-deprecation-warning
+    # not the most sure of what this does, just wanted to silence for now
+    # as we're not doing any i18n
+    I18n.enforce_available_locales = false
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
